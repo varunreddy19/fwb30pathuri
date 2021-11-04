@@ -6,4 +6,11 @@ block content
   div(class="container-fluid mt-3")
   div(class="row")
     each uni,index in Universities
-        div(class="col-sm-4") #{uni.UniversityType} - #{uni.UniversityFees} - #{uni.UniversitiesCourses} 
+        div(class="col-sm-4" onclick=`buy(${index})`) #{uni.UniversityType} - #{uni.UniversityFees} - #{uni.UniversitiesCourses} 
+
+    script.
+
+      function buy(itemNo)
+      {
+        alert(`You purchased Item ${itemNo+1}`)
+      } 

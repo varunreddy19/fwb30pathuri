@@ -3,14 +3,14 @@ extends layout
 block content
   h1= title
   p Varun Reddy #{title}
-  buttonn(type="button", class="btn btn-secondary") Press ME
+  buttonn(type="button", class="btn btn-secondary" onclick="updateCount()") Press ME
 
   p 
   div(id="target") Displaying contents
 
   script.
     var client_count=0;
-    function update(){
+    function updateCount(){
       client_count+=1;
       
       document.getElementById("target").innerHTML="Value Now "+client_count  ;
